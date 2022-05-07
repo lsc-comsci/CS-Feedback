@@ -38,6 +38,7 @@ async def on_message(message):
 	fake_name = retrieve_fake_name(message.author)
 
 	await client.feedback_channel.send(f"{fake_name} said: {message.content}")
+	await message.reply("Your feedback has been received ✅")
 
 with open("token.txt", "r") as file:
 	token = file.read()
